@@ -70,14 +70,15 @@ Having an active and healthy commit history on GitHub is important for your futu
 2. In the `db` folder, create a file named `schema.sql`. //DONE
    Write SQL queries this file that do the following:
 
-   - Create the `burgers_db`.
-   - Switch to or use the `burgers_db`.
+   - Create the `burgers_db`.//DONE
+   - Switch to or use the `burgers_db`.//DONE
    - Create a `burgers` table with these fields:
-     - **id**: an auto incrementing int that serves as the primary key.
-     - **burger_name**: a string.
-     - **devoured**: a boolean.
+     - **id**: an auto incrementing int that serves as the primary key.//DONE
+     - **burger_name**: a string.//DONE
+     - **devoured**: a boolean.//DONE
 
-3. Still in the `db` folder, create a `seeds.sql` file. In this file, write insert queries to populate the `burgers` table with at least three entries.
+3. Still in the `db` folder, create a `seeds.sql` file. //DONE
+   In this file, write insert queries to populate the `burgers` table with at least three entries.
 
 4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
 
@@ -95,17 +96,17 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 #### Config Setup
 
-1. Inside your `burger` directory, create a folder named `config`.
+1. Inside your `burger` directory, create a folder named `config`. //DONE
 
-2. Create a `connection.js` file inside `config` directory.
+2. Create a `connection.js` file inside `config` directory.//DONE
 
-   - Inside the `connection.js` file, setup the code to connect Node to MySQL.
+   - Inside the `connection.js` file, setup the code to connect Node to MySQL. //DONE
 
-   - Export the connection.
+   - Export the connection.//DONE
 
-3. Create an `orm.js` file inside `config` directory.
+3. Create an `orm.js` file inside `config` directory.//DONE
 
-   - Import (require) `connection.js` into `orm.js`
+   - Import (require) `connection.js` into `orm.js`//DONE
 
    - In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
 
@@ -117,11 +118,11 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 #### Model setup
 
-- Inside your `burger` directory, create a folder named `models`.
+- Inside your `burger` directory, create a folder named `models`.//DONE
 
-  - In `models`, make a `burger.js` file.
+  - In `models`, make a `burger.js` file.//DONE
 
-    - Inside `burger.js`, import `orm.js` into `burger.js`
+    - Inside `burger.js`, import `orm.js` into `burger.js`//DONE
 
     - Also inside `burger.js`, create the code that will call the ORM functions using burger specific input for the ORM.
 
@@ -129,26 +130,26 @@ Having an active and healthy commit history on GitHub is important for your futu
 
 #### Controller setup
 
-1. Inside your `burger` directory, create a folder named `controllers`.
+1. Inside your `burger` directory, create a folder named `controllers`.//DONE
 
-2. In `controllers`, create the `burgers_controller.js` file.
+2. In `controllers`, create the `burgers_controller.js` file.//DONE
 
-3. Inside the `burgers_controller.js` file, import the following:
+3. Inside the `burgers_controller.js` file, import the following: //DONE
 
-   - Express
-   - `burger.js`
+   - Express //DONE
+   - `burger.js`//DONE
 
 4. Create the `router` for the app, and export the `router` at the end of your file.
 
 #### View setup
 
-1. Inside your `burger` directory, create a folder named `views`.
+1. Inside your `burger` directory, create a folder named `views`.//DONE
 
-   - Create the `index.handlebars` file inside `views` directory.
+   - Create the `index.handlebars` file inside `views` directory. //DONE
 
-   - Create the `layouts` directory inside `views` directory.
+   - Create the `layouts` directory inside `views` directory.//DONE
 
-     - Create the `main.handlebars` file inside `layouts` directory.
+     - Create the `main.handlebars` file inside `layouts` directory.//DONE
 
      - Setup the `main.handlebars` file so it's able to be used by Handlebars.
 
