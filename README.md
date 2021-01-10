@@ -78,21 +78,21 @@ Having an active and healthy commit history on GitHub is important for your futu
      - **devoured**: a boolean.//DONE
 
 3. Still in the `db` folder, create a `seeds.sql` file. //DONE
-   In this file, write insert queries to populate the `burgers` table with at least three entries.
+   In this file, write insert queries to populate the `burgers` table with at least three entries.//DONE
 
-4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line
+4. Run the `schema.sql` and `seeds.sql` files into the mysql server from the command line//NOT SURE IF DID IT CORRECTLY, I JUST OPENED WORKBENCH AND RUN THE DB FROM THERE
 
 5. Now you're going to run these SQL files.
 
    - Make sure you're in the `db` folder of your app.
 
-   - Start MySQL command line tool and login: `mysql -u root -p`.
+   - Start MySQL command line tool and login: `mysql -u root -p`.//DONE
 
-   - With the `mysql>` command line tool running, enter the command `source schema.sql`. This will run your schema file and all of the queries in it -- in other words, you'll be creating your database.
+   - With the `mysql>` command line tool running, enter the command `source schema.sql`. This will run your schema file and all of the queries in it -- in other words, you'll be creating your database.//GOT ERROR ERROR 1007 (HY000): Can't create database 'burgers_db'; database exists - ERROR 1050 (42S01): Table 'burgers' already exists
 
-   - Now insert the entries you defined in `seeds.sql` by running the file: `source seeds.sql`.
+   - Now insert the entries you defined in `seeds.sql` by running the file: `source seeds.sql`.//DONE GOT QUERY OK
 
-   - Close out of the MySQL command line tool: `exit`.
+   - Close out of the MySQL command line tool: `exit`.//DONE GOT BYE
 
 #### Config Setup
 
@@ -108,7 +108,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
    - Import (require) `connection.js` into `orm.js`//DONE
 
-   - In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.
+   - In the `orm.js` file, create the methods that will execute the necessary MySQL commands in the controllers. These are the methods you will need to use in order to retrieve and store data in your database.//CHECK THIS
 
      - `selectAll()`
      - `insertOne()`
@@ -139,7 +139,7 @@ Having an active and healthy commit history on GitHub is important for your futu
    - Express //DONE
    - `burger.js`//DONE
 
-4. Create the `router` for the app, and export the `router` at the end of your file.
+4. Create the `router` for the app, and export the `router` at the end of your file.//DONE -CHECK
 
 #### View setup
 
@@ -157,7 +157,7 @@ Having an active and healthy commit history on GitHub is important for your futu
 
      - Create a button in `index.handlebars` that will submit the user input into the database.
 
-#### Directory structure
+#### Directory structure //DONE
 
 All the recommended files and directories from the steps above should look like the following structure:
 
