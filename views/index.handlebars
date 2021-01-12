@@ -1,36 +1,26 @@
 <h1>Eat-Da-Burger!</h1>
-
-
 <div class="container">
     <div class="row">
-        <div class="col-md-6" id="to-eat">
+        <div class="col">
             <h2>To Eat!</h2>
-
             {{#each burgers}}
             {{#unless this.devoured}}
             <div class="available-burgers">
                 <form method="PUT" class="update-button">
-                    {{this.burger_name}}
-                    <button type="submit" class="btn- btn-default" id="burger-ready">DEVOUR IT</button>
+                    {{this.burger_name}} |
+                    <button type="submit" class="change-devoured" id="burger-ready">DEVOUR IT</button>
                 </form>
             </div>
             {{/unless}}
             {{/each}}
-
         </div>
-        <div class="col-md-6">
-
-            <div class="col" id="list-devoured">
-                <h2 class="burger-title text-center">Burgers Devoured</h2>
-                {{#each burgers}}
-                {{#if this.devoured}}
-                <div class="devoured-burgers">
-                    {{this.burger_name}}
-                </div>
-                {{/if}}
-                {{/each}}
-            </div>
-
+        <div class="col">
+            <h2 class="burger-title text-center">Burgers Devoured</h2>
+            {{#each burgers}}
+            {{#if this.devoured}}
+            {{> burger/burger-block devoured=true}}
+            {{/if}}
+            {{/each}}
         </div>
     </div>
     <div class="row">

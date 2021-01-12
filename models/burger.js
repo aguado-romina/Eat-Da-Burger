@@ -12,16 +12,16 @@ let burger = {
       cb(res);
     });
   },
-  update: function (objColVals, condition, cb) {
-    orm.update("burgers", objColVals, condition, function (res) {
+  update: function (objColVals, boolean, condition, cb) {
+    orm.update("burgers", objColVals, boolean, condition, function (res) {
       cb(res);
     });
   },
-  // delete: function (condition, cb) {
-  //   orm.delete("burgers", condition, function (res) {
-  //     cb(res);
-  //   });
-  // },
+  delete: function (condition, cb) {
+    orm.delete("burgers", condition, function (res) {
+      cb(res);
+    });
+  },
 };
 
 // Export the database functions for the controller (burgersController.js).
