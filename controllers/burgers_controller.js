@@ -10,7 +10,7 @@ router.get("/", function (req, res) {
     let hbsObject = {
       burgers: data,
     };
-    console.log(hbsObject);
+    // console.log(hbsObject);
 
     res.render("index", hbsObject);
   });
@@ -18,18 +18,14 @@ router.get("/", function (req, res) {
 
 router.post("/api/burgers", function (req, res) {
   console.log(req.body);
-  burger.create(
-    ["burger_name", "devoured"],
-    [req.body["burger_name"], req.body.devoured],
-    function (result) {
-      // Send back the ID of the new quote
-      res.json(result);
-    }
-  );
+  burger.create(["burger_name"], [req.body.burger_name], function (result) {
+    // Send back the ID of the new quote
+    res.json(result);
+  });
 });
 
 router.put("/api/burgers/:id", function (req, res) {
-  // let condition = "id = " + req.params.id;
+  let condition = "id = " + req.params.id;
   console.log("condition", condition);
 
   burger.update("devoured", 1, condition, function (result) {

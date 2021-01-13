@@ -3,17 +3,17 @@
     <div class="row">
         <div class="col">
             <h2 class="change-todevoured">To Eat!</h2>
-            {{#each this.burger}}
+            {{#each burgers}}
             {{#unless devoured}}
-            {{> partials/burger/burger-block devoured=1}}
+            {{> burger/burger-block devoured=1}}
             {{/unless}}
             {{/each}}
         </div>
         <div class="col">
             <h2 class="delete-burger">Burgers Devoured</h2>
-            {{#each this.burger}}
+            {{#each burgers}}
             {{#if devoured}}
-            {{> partials/burger/burger-block devoured=0}}
+            {{> burger/burger-block devoured=0}}
             {{/if}}
             {{/each}}
         </div>
